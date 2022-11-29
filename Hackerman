@@ -1,0 +1,45 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+/* Name of the class has to be "Main" only if the class is public. */
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		// your code goes here
+		Scanner sc=new Scanner(System.in);
+        int sum=0;
+		int T=sc.nextInt();
+		int A,B=0;
+		for(int i=1;i<=T;i++){
+		    A=sc.nextInt();
+		    B=sc.nextInt();
+		    sum=A+B;
+		   
+		    if(sum==2)
+		        System.out.println("Alice");
+		    else if(A==B)
+		        System.out.println("Bob");
+		    else
+		    {
+		    String winner = "";
+		    for(int j=2;j<sum;j++){
+		        
+		        if(sum%j==0)
+		        {
+		        winner = "Bob";
+		        break;
+		        }
+		        
+		    }
+		    if(!"Bob".equals(winner))
+		    {
+		        winner = "Alice";
+		    }
+		    System.out.println(winner);
+		    }
+		    
+		}
+	}
+}
